@@ -1,0 +1,194 @@
+body {
+  margin: 0;
+  width: 93vw;
+  height: 100vh;
+  padding: 3% 3% 7% 4%;
+  overflow: hidden;
+  background-color: #222831;
+  font-family: "Audiowide", sans-serif, serif, cursive;
+}
+
+.header {
+  width: 300px;
+  margin: 0 auto 20px auto;
+  color: #bbbfca;
+}
+
+.main-section {
+  display: grid;
+  grid-template-columns: 250px auto;
+  grid-gap: 40px;
+  height: 70vh;
+}
+.main-section .left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 40px;
+  background: linear-gradient(145deg, #1f242c, #242b34);
+  box-shadow: 12px 12px 25px #1a1e25, -12px -12px 25px #2a323d;
+}
+.main-section .left .btn {
+  width: 150px;
+  height: 50px;
+  margin-top: 20px;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  color: #bbbfca;
+  font-weight: bold;
+  font-family: "Audiowide", cursive;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #242b34, #1f242c);
+  box-shadow: 9px 9px 15px #1a1e25, -9px -9px 15px #2a323d;
+}
+.main-section .left .btn:active {
+  border-radius: 20px;
+  background: linear-gradient(145deg, #242b34, #1a212b, #242b34);
+  box-shadow: none;
+  box-shadow: inset(9px 9px 10px #353c49, -9px -9px 10px #323b47);
+}
+.main-section .left .clock {
+  height: 150px;
+  width: 150px;
+  font-size: 20px;
+  color: #bbbfca;
+  border: none;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #1f242c, #242b34);
+  box-shadow: 9px 9px 15px #1a1e25, -9px -9px 15px #2a323d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.main-section .left .clock .timer {
+  font-size: 30px;
+}
+.main-section .left .errors {
+  height: 80px;
+  width: 150px;
+  color: #bbbfca;
+  font-size: 20px;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #1f242c, #242b34);
+  box-shadow: 9px 9px 15px #1a1e25, -9px -9px 15px #2a323d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-section .left .errors #error-val {
+  color: #f05454;
+  margin-left: 10px;
+}
+.main-section .right {
+  border-radius: 40px;
+  background: #222831;
+  box-shadow: -17px -17px 34px rgba(44, 53, 65, 0.631372549), 17px 17px 34px #1c2027;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.main-section .right .evaluation {
+  width: 100%;
+  height: 20px;
+  padding: 0;
+  margin: 5px 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  color: #bbbfca;
+}
+.main-section .right .evaluation .hidden {
+  display: none;
+}
+.main-section .right .evaluation #speed-val {
+  color: #d89216;
+  margin: 0;
+  margin-right: 50px;
+  margin-left: 15px;
+}
+.main-section .right .evaluation #score-val {
+  color: #61b15a;
+  margin: 0;
+  margin-left: 15px;
+}
+.main-section .right .paragraph {
+  box-sizing: border-box;
+  width: 100%;
+  height: 200px;
+  padding: 30px 100px;
+}
+.main-section .right .paragraph .content {
+  font-size: 30px;
+  font-family: "JetBrains Mono", "Courier New", Courier, monospace;
+}
+.main-section .right .paragraph .content .typing {
+  display: inline-block;
+  color: rgba(244, 244, 242, 0.7960784314);
+  background: none;
+}
+.main-section .right .paragraph .content .current {
+  background-color: #79a3b1;
+  color: #3e4149;
+}
+.main-section .right .paragraph .content .typed {
+  color: #3e4149;
+  background: none;
+}
+.main-section .right .paragraph .content .wrong {
+  color: #f05454;
+  background: none;
+}
+.main-section .right #input-content {
+  position: absolute;
+  z-index: -1;
+  width: 0;
+  height: 0;
+  color: transparent;
+  background-color: none;
+}
+.main-section .right .keyboard {
+  width: 80%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.main-section .right .keyboard .top, .main-section .right .keyboard .middle, .main-section .right .keyboard .bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-section .right .keyboard .key {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  font-size: 25px;
+  color: #9ba4b4;
+  border-radius: 5px;
+  background: #202227;
+  box-shadow: 5px 5px 15px #1a1e25, -5px -5px 15px #2a323d;
+  margin: 5px 10px;
+}
+.main-section .right .keyboard .pressed {
+  background: #1b1c20;
+  box-shadow: none;
+  color: #41454d;
+}
+
+.footer {
+  width: 93vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #bbbfca;
+  position: absolute;
+  bottom: 0;
+}/*# sourceMappingURL=style.css.map */
